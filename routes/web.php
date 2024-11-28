@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view ('welcome');
 });
 Route::get('/echo', function () {
-    echo 'Hello Pukimak!';
+    echo 'Hello Gaesss!';
 });
 Route::get('/home', function () {
     return view ('main');
