@@ -33,40 +33,31 @@
 
 </head>
 <body>
-        <!-- Left Panel -->
-
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
-
             <div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./"><img src="{{ asset('style/images/logo.png') }}" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="{{ asset('style/images/logo2.png') }}" alt="Logo"></a>
             </div>
-
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href=""> <i class="menu-icon fa fa-dashboard"></i>Login</a>
+                        <a href=""> <i class="menu-icon fa fa-puzzle-piece"></i>Event</a>
+                        <a href=""> <i class="menu-icon fa fa-puzzle-piece"></i>Setting</a>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
         </nav>
-    </aside><!-- /#left-panel -->
-
-    <!-- Left Panel -->
-
-    <!-- Right Panel -->
+    </aside>
 
     <div id="right-panel" class="right-panel">
-
         <!-- Header-->
         <header id="header" class="header">
-
             <div class="header-menu">
-
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
@@ -81,21 +72,13 @@
                         <div class="dropdown for-notification">
                           <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bell"></i>
-                            <span class="count bg-danger">5</span>
+                            <span class="count bg-danger">1</span>
                           </button>
                           <div class="dropdown-menu" aria-labelledby="notification">
-                            <p class="red">You have 3 Notification</p>
+                            <p class="red">You have 1 Notification</p>
                             <a class="dropdown-item media bg-flat-color-1" href="#">
                                 <i class="fa fa-check"></i>
-                                <p>Server #1 overloaded.</p>
-                            </a>
-                            <a class="dropdown-item media bg-flat-color-4" href="#">
-                                <i class="fa fa-info"></i>
-                                <p>Server #2 overloaded.</p>
-                            </a>
-                            <a class="dropdown-item media bg-flat-color-5" href="#">
-                                <i class="fa fa-warning"></i>
-                                <p>Server #3 overloaded.</p>
+                                <p>Kegiatan Akan Segera Terlaksana</p>
                             </a>
                           </div>
                         </div>
@@ -105,40 +88,16 @@
                                 id="message"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="ti-email"></i>
-                            <span class="count bg-primary">9</span>
+                            <span class="count bg-primary">2</span>
                           </button>
                           <div class="dropdown-menu" aria-labelledby="message">
-                            <p class="red">You have 4 Mails</p>
+                            <p class="red">You have 1 Mails</p>
                             <a class="dropdown-item media bg-flat-color-1" href="#">
                                 <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
                                 <span class="message media-body">
                                     <span class="name float-left">Jonathan Smith</span>
                                     <span class="time float-right">Just now</span>
                                         <p>Hello, this is an example msg</p>
-                                </span>
-                            </a>
-                            <a class="dropdown-item media bg-flat-color-4" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/2.jpg"></span>
-                                <span class="message media-body">
-                                    <span class="name float-left">Jack Sanders</span>
-                                    <span class="time float-right">5 minutes ago</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                </span>
-                            </a>
-                            <a class="dropdown-item media bg-flat-color-5" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
-                                <span class="message media-body">
-                                    <span class="name float-left">Cheryl Wheeler</span>
-                                    <span class="time float-right">10 minutes ago</span>
-                                        <p>Hello, this is an example msg</p>
-                                </span>
-                            </a>
-                            <a class="dropdown-item media bg-flat-color-3" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
-                                <span class="message media-body">
-                                    <span class="name float-left">Rachel Santos</span>
-                                    <span class="time float-right">15 minutes ago</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
                                 </span>
                             </a>
                           </div>
@@ -149,7 +108,7 @@
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{ asset('style/images/admin.jpg')}}" alt="User Avatar">
                         </a>
 
                         <div class="user-menu dropdown-menu">
@@ -165,11 +124,11 @@
 
                     <div class="language-select dropdown" id="language-select">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
-                            <i class="flag-icon flag-icon-us"></i>
+                            <i class="flag-icon flag-icon-id"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="language" >
                             <div class="dropdown-item">
-                                <span class="flag-icon flag-icon-fr"></span>
+                                <span class="flag-icon flag-icon-jp"></span>
                             </div>
                             <div class="dropdown-item">
                                 <i class="flag-icon flag-icon-es"></i>
@@ -216,182 +175,19 @@
                   <div class="col-lg-6">
                     <div class="card">
                       <div class="card-header">
-                        <strong>Basic Form</strong> Elements
+                        <strong>Form Pengisian Event</strong>
                       </div>
                       <div class="card-body card-block">
                         <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                           <div class="row form-group">
-                            <div class="col col-md-3"><label class=" form-control-label">Static</label></div>
+                            <div class="col col-md-3"><label class=" form-control-label">Nama</label></div>
                             <div class="col-12 col-md-9">
                               <p class="form-control-static">Username</p>
                             </div>
                           </div>
                           <div class="row form-group">
-                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Text Input</label></div>
-                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control"><small class="form-text text-muted">This is a help text</small></div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email Input</label></div>
-                            <div class="col-12 col-md-9"><input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control"><small class="help-block form-text">Please enter your email</small></div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password</label></div>
-                            <div class="col-12 col-md-9"><input type="password" id="password-input" name="password-input" placeholder="Password" class="form-control"><small class="help-block form-text">Please enter a complex password</small></div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="disabled-input" class=" form-control-label">Disabled Input</label></div>
-                            <div class="col-12 col-md-9"><input type="text" id="disabled-input" name="disabled-input" placeholder="Disabled" disabled="" class="form-control"></div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Textarea</label></div>
-                            <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea></div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="select" class=" form-control-label">Select</label></div>
-                            <div class="col-12 col-md-9">
-                              <select name="select" id="select" class="form-control">
-                                <option value="0">Please select</option>
-                                <option value="1">Option #1</option>
-                                <option value="2">Option #2</option>
-                                <option value="3">Option #3</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="selectLg" class=" form-control-label">Select Large</label></div>
-                            <div class="col-12 col-md-9">
-                              <select name="selectLg" id="selectLg" class="form-control-lg form-control">
-                                <option value="0">Please select</option>
-                                <option value="1">Option #1</option>
-                                <option value="2">Option #2</option>
-                                <option value="3">Option #3</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="selectSm" class=" form-control-label">Select Small</label></div>
-                            <div class="col-12 col-md-9">
-                              <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
-                                <option value="0">Please select</option>
-                                <option value="1">Option #1</option>
-                                <option value="2">Option #2</option>
-                                <option value="3">Option #3</option>
-                                <option value="4">Option #4</option>
-                                <option value="5">Option #5</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="disabledSelect" class=" form-control-label">Disabled Select</label></div>
-                            <div class="col-12 col-md-9">
-                              <select name="disabledSelect" id="disabledSelect" disabled="" class="form-control">
-                                <option value="0">Please select</option>
-                                <option value="1">Option #1</option>
-                                <option value="2">Option #2</option>
-                                <option value="3">Option #3</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="multiple-select" class=" form-control-label">Multiple select</label></div>
-                            <div class="col col-md-9">
-                              <select name="multiple-select" id="multiple-select" multiple="" class="form-control">
-                                <option value="1">Option #1</option>
-                                <option value="2">Option #2</option>
-                                <option value="3">Option #3</option>
-                                <option value="4">Option #4</option>
-                                <option value="5">Option #5</option>
-                                <option value="6">Option #6</option>
-                                <option value="7">Option #7</option>
-                                <option value="8">Option #8</option>
-                                <option value="9">Option #9</option>
-                                <option value="10">Option #10</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label class=" form-control-label">Radios</label></div>
-                            <div class="col col-md-9">
-                              <div class="form-check">
-                                <div class="radio">
-                                  <label for="radio1" class="form-check-label ">
-                                    <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Option 1
-                                  </label>
-                                </div>
-                                <div class="radio">
-                                  <label for="radio2" class="form-check-label ">
-                                    <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Option 2
-                                  </label>
-                                </div>
-                                <div class="radio">
-                                  <label for="radio3" class="form-check-label ">
-                                    <input type="radio" id="radio3" name="radios" value="option3" class="form-check-input">Option 3
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label class=" form-control-label">Inline Radios</label></div>
-                            <div class="col col-md-9">
-                              <div class="form-check-inline form-check">
-                                <label for="inline-radio1" class="form-check-label ">
-                                  <input type="radio" id="inline-radio1" name="inline-radios" value="option1" class="form-check-input">One
-                                </label>
-                                <label for="inline-radio2" class="form-check-label ">
-                                  <input type="radio" id="inline-radio2" name="inline-radios" value="option2" class="form-check-input">Two
-                                </label>
-                                <label for="inline-radio3" class="form-check-label ">
-                                  <input type="radio" id="inline-radio3" name="inline-radios" value="option3" class="form-check-input">Three
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label class=" form-control-label">Checkboxes</label></div>
-                            <div class="col col-md-9">
-                              <div class="form-check">
-                                <div class="checkbox">
-                                  <label for="checkbox1" class="form-check-label ">
-                                    <input type="checkbox" id="checkbox1" name="checkbox1" value="option1" class="form-check-input">Option 1
-                                  </label>
-                                </div>
-                                <div class="checkbox">
-                                  <label for="checkbox2" class="form-check-label ">
-                                    <input type="checkbox" id="checkbox2" name="checkbox2" value="option2" class="form-check-input"> Option 2
-                                  </label>
-                                </div>
-                                <div class="checkbox">
-                                  <label for="checkbox3" class="form-check-label ">
-                                    <input type="checkbox" id="checkbox3" name="checkbox3" value="option3" class="form-check-input"> Option 3
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label class=" form-control-label">Inline Checkboxes</label></div>
-                            <div class="col col-md-9">
-                              <div class="form-check-inline form-check">
-                                <label for="inline-checkbox1" class="form-check-label ">
-                                  <input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1" class="form-check-input">One
-                                </label>
-                                <label for="inline-checkbox2" class="form-check-label ">
-                                  <input type="checkbox" id="inline-checkbox2" name="inline-checkbox2" value="option2" class="form-check-input">Two
-                                </label>
-                                <label for="inline-checkbox3" class="form-check-label ">
-                                  <input type="checkbox" id="inline-checkbox3" name="inline-checkbox3" value="option3" class="form-check-input">Three
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="file-input" class=" form-control-label">File input</label></div>
-                            <div class="col-12 col-md-9"><input type="file" id="file-input" name="file-input" class="form-control-file"></div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col col-md-3"><label for="file-multiple-input" class=" form-control-label">Multiple File input</label></div>
-                            <div class="col-12 col-md-9"><input type="file" id="file-multiple-input" name="file-multiple-input" multiple="" class="form-control-file"></div>
+                            <div class="col col-md-3"><label for="nama-kegiatan" class=" form-control-label">Nama Kegiatan</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="nama-kegiatan" name="Nama-Kegiatan" placeholder="Sebutkan Nama Kegiatan" class="form-control"><small class="form-text text-muted">This is a help text</small></div>
                           </div>
                         </form>
                       </div>
@@ -403,27 +199,8 @@
                           <i class="fa fa-ban"></i> Reset
                         </button>
                       </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header">
-                        <strong>Inline</strong> Form
-                      </div>
-                      <div class="card-body card-block">
-                        <form action="" method="post" class="form-inline">
-                          <div class="form-group"><label for="exampleInputName2" class="pr-1  form-control-label">Name</label><input type="text" id="exampleInputName2" placeholder="Jane Doe" required="" class="form-control"></div>
-                          <div class="form-group"><label for="exampleInputEmail2" class="px-1  form-control-label">Email</label><input type="email" id="exampleInputEmail2" placeholder="jane.doe@example.com" required="" class="form-control"></div>
-                        </form>
-                      </div>
-                      <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-sm">
-                          <i class="fa fa-dot-circle-o"></i> Submit
-                        </button>
-                        <button type="reset" class="btn btn-danger btn-sm">
-                          <i class="fa fa-ban"></i> Reset
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                </div>
+                
                         
             </div><!-- .animated -->
         </div><!-- .content -->
