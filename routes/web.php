@@ -1,13 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 
-Route::get('/', function () {
-    return view ('welcome');
+Route::get('/main', function () {
+    return view ('master');
 });
-Route::get('/echo', function () {
+Route::get('/', function () {
     echo 'Hello Gaesss!';
 });
-Route::get('/home', function () {
-    return view ('main');
-});
+// Route::get('/home', function () {
+//     return view ('master');
+// });
+route::get('/home', [BlogController::class, 'index']);
