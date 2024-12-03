@@ -14,14 +14,10 @@
                     <div class="dropdown for-notification">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-bell"></i>
-                        <span class="count bg-danger">1</span>
+                        <span class="count bg-danger"></span>
                       </button>
                       <div class="dropdown-menu" aria-labelledby="notification">
-                        <p class="red">You have 1 Notification</p>
-                        <a class="dropdown-item media bg-flat-color-1" href="#">
-                            <i class="fa fa-check"></i>
-                            <p>Kegiatan Akan Segera Terlaksana</p>
-                        </a>
+                        
                       </div>
                     </div>
 
@@ -33,15 +29,6 @@
                         <span class="count bg-primary">2</span>
                       </button>
                       <div class="dropdown-menu" aria-labelledby="message">
-                        <p class="red">You have 1 Mails</p>
-                        <a class="dropdown-item media bg-flat-color-1" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
-                            <span class="message media-body">
-                                <span class="name float-left">Jonathan Smith</span>
-                                <span class="time float-right">Just now</span>
-                                    <p>Hello, this is an example msg</p>
-                            </span>
-                        </a>
                       </div>
                     </div>
                 </div>
@@ -50,17 +37,14 @@
             <div class="col-sm-5">
                 <div class="user-area dropdown float-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="user-avatar rounded-circle" src="{{ asset('style/images/admin.jpg')}}" alt="User Avatar">
+                        <img class="user-avatar rounded-circle" src="" alt="User Avatar">
+                        {{-- <img class="user-avatar rounded-circle" src="{{ asset('style/images/admin.jpg')}}" alt="User Avatar"> --}}
+
                     </a>
 
                     <div class="user-menu dropdown-menu">
                             <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
-
-                            <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
-
-                            <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
-
-                            <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
+                            <a class="nav-link" href="/login"><i class="fa fa-power -off"></i>Log In</a>
                     </div>
                 </div>
 
@@ -102,7 +86,7 @@
                     <ol class="breadcrumb text-right">
                         <li><a href="#">Dashboard</a></li>
                         <li><a href="#">Forms</a></li>
-                        <li class="active">Basic</li>
+                        <li class="active"></li>
                     </ol>
                 </div>
             </div>

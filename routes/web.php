@@ -12,4 +12,6 @@ Route::get('/', function () {
 // Route::get('/home', function () {
 //     return view ('master');
 // });
-route::get('/home', [BlogController::class, 'index']);
+route::get('/event', [BlogController::class, 'index']);
+route::get('/login', [BlogController::class, 'login']);
+route::get('/home', [BlogController::class, 'home']);

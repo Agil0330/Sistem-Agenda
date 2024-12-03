@@ -9,4 +9,10 @@ class BlogController extends Controller
     public function index(){
         return view ('content.contentmaster');
     }
+    public function login(){
+        return view ('content.contentlogin');
+    }
+    public function home(){
+        return view ('content.contenthome');
+    }
 }

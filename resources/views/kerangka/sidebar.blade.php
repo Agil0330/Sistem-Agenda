@@ -10,15 +10,15 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href=""> <i class="menu-icon fa fa-dashboard"></i>Home</a>
-                        <a href="/main"> <i class="menu-icon fa fa-puzzle-piece"></i>Event</a>
+                        <a href="/home"> <i class="menu-icon fa fa-dashboard"></i>Home</a>
+                        <a href="/event"> <i class="menu-icon fa fa-puzzle-piece"></i>Event</a>
                         <a href=""> <i class="menu-icon fa fa-puzzle-piece"></i>Setting</a>
                         <a href=""> <i class="menu-icon fa fa-puzzle-piece"></i>About</a>
                     </li>
                 </ul>
             </div>
         </nav>
-    </aside>
+</aside>
     {{-- <div id="right-panel" class="right-panel">
         <header id="header" class="header">
             <div class="header-menu">
