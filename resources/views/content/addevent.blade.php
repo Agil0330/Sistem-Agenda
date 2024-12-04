@@ -1,7 +1,9 @@
 @extends('script.formevent')
 
 @section('isi')
-  <div class="col-lg-6">
+<div class="col-lg-6">
+  <form action="/push" method="POST">
+   @csrf
     <div class="card">
       <div class="card-header"><strong>Agenda</strong><small> Form</small></div>
       <div class="card-body card-block">
@@ -19,6 +21,7 @@
           <i class="fa fa-ban"></i> Reset
         </button>
       </div>
-    </div>
-  </div>
+    </div>  
+ </form>
+</div> 
 @endsection
