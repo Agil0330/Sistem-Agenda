@@ -18,17 +18,20 @@
       <th>Tanggal</th>
       <th>Lokasi</th>
       <th>Keterangan</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
     @foreach ($data_event as $d)
       <tr>
-        <td>{{$d['id']}}</td>
+        <td>{{$loop->iteration}}</td>
         <td>{{$d['nama_event']}}</td>
         <td>{{$d['tanggal']}}</td>
         <td>{{$d['waktu']}}</td>
         <td>{{$d['lokasi']}}</td>
         <td>{{$d['keterangan']}}</td>
+        <td><a href="{{route('edit',['id'=>$d->id])}}" class="btn btn-success">Edit</a>
+            <a href="" class="btn btn-danger">Hapus</a></td>
       </tr>
     @endforeach
   </tbody>
@@ -36,5 +39,4 @@
       </div>
   </div>
 </div>
-  
 @endsection
