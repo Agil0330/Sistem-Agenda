@@ -30,10 +30,13 @@
         <td>{{$d['waktu']}}</td>
         <td>{{$d['lokasi']}}</td>
         <td>{{$d['keterangan']}}</td>
-        <td><a href="{{route('edit',['id'=>$d->id])}}" class="btn btn-success">Edit</a>
-            <a href="" class="btn btn-danger">Hapus</a></td>
+        <td><a href="{{route('edit',['id'=>$d->id])}}" class="btn btn-success m-1">Edit</a>
+            <a href="{{route('hapus',['id'=>$d->id])}}" class="btn btn-danger ml-1" id="destroy">Hapus</a>
+        </td>
       </tr>
+  </div>
     @endforeach
+    
   </tbody>
   </table>
       </div>

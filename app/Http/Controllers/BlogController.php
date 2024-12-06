@@ -41,4 +41,11 @@ class BlogController extends Controller
         $data_event->update($request->all());
         return redirect() -> route('event');
     }
+
+// menghapus data Event
+    public function hapus($id){
+        $data_event = Event::findorfail($id);
+        $data_event->delete();
+        return back();
+    }
 }

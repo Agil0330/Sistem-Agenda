@@ -21,3 +21,4 @@ route::get('/add', [BlogController::class, 'add']);
 route::post('/push', [BlogController::class, 'push']);
 route::get('/edit/{id}', [BlogController::class, 'edit'])->name('edit');
 route::PUT('/update/{id}', [BlogController::class, 'update'])->name('update');
+route::get('/hapus/{id}', [BlogController::class, 'hapus'])->name('hapus');
