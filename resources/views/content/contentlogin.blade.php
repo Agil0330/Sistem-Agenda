@@ -11,18 +11,28 @@
               </a>
           </div>
           <div class="login-form">
-              <form>
+              <form action="{{route('login_proses')}}" method="POST">
+                @csrf
                 <div class="form-group">
                   <label>Username</label>
-                  <input type="username" class="form-control" placeholder="Username">
+                  <input type="username" name="name" class="form-control" placeholder="Username">
+                  @error('name')
+                      <small>{{$message}}</small>
+                  @enderror
               </div>
                   <div class="form-group">
                       <label>Email</label>
-                      <input type="email" class="form-control" placeholder="Email">
+                      <input type="email" name="email" class="form-control" placeholder="Email">
+                      @error('email')
+                      <small>{{$message}}</small>
+                        @enderror
                   </div>
                   <div class="form-group">
                       <label>Password</label>
-                      <input type="password" class="form-control" placeholder="Password">
+                      <input type="password" name="password" class="form-control" placeholder="Password">
+                      @error('password')
+                      <small>{{$message}}</small>
+                      @enderror
                   </div>
                   <div class="checkbox">
                       <label>

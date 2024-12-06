@@ -28,7 +28,7 @@ class BlogController extends Controller
         // $data_event['lokasi'] = $request->lokasi;
         // $data_event['keterangan'] = $request->keterangan;
         // Event::create($data_event);
-        return redirect() -> route('event');
+        return redirect() -> route('adminevent');
     }
 // mengedit data Event
     public function edit(Request $request,$id){
@@ -39,7 +39,7 @@ class BlogController extends Controller
         // Event::where($id)->update($data_event);
         $data_event = Event::findorfail($id);
         $data_event->update($request->all());
-        return redirect() -> route('event');
+        return redirect() -> route('adminevent');
     }
 
 // menghapus data Event

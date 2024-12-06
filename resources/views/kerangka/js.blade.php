@@ -4,3 +4,6 @@
     <script src="{{asset('style/assets/js/plugins.j')}}s"></script>
     <script src="{{asset('style/assets/js/main.js')}}"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    

@@ -2,7 +2,7 @@
 
 @section('isi')
 <div class="col-lg-6">
-  <form action="{{route('update',['id'=>$data_event->id])}}" method="POST">
+  <form action="{{route('adminupdate',['id'=>$data_event->id])}}" method="POST">
     @csrf
     @method('PUT')
     <div class="card">

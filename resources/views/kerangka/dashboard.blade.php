@@ -44,7 +44,7 @@
 
                     <div class="user-menu dropdown-menu">
                             <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
-                            <a class="nav-link" href="/login"><i class="fa fa-power -off"></i>Log In</a>
+                            <a class="nav-link" href="{{route('logout')}}"><i class="fa fa-power -off"></i>Log Out</a>
                     </div>
                 </div>
 

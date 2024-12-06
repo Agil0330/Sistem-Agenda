@@ -2,7 +2,7 @@
 
 @section('isi')
 <div class="col-lg-6">
-  <form action="/push" method="POST">
+  <form action="{{route('adminpush')}}" method="POST">
     @csrf
     {{-- @method('PUT') --}}
     <div class="card">

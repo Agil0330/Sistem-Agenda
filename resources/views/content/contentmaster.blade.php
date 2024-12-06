@@ -8,7 +8,7 @@
           <strong class="card-title">Daftar Event</strong>      
       </div>
       <div class="card-body">
-       <a href="/add" class="btn btn-primary mb-3">Tambah Data</a>
+       <a href="{{route('adminadd')}}" class="btn btn-primary mb-3">Tambah Data</a>
   <table id="bootstrap-data-table" class="table table-striped table-bordered">
   <thead>
     <tr>
@@ -30,8 +30,8 @@
         <td>{{$d['waktu']}}</td>
         <td>{{$d['lokasi']}}</td>
         <td>{{$d['keterangan']}}</td>
-        <td><a href="{{route('edit',['id'=>$d->id])}}" class="btn btn-success m-1">Edit</a>
-            <a href="{{route('hapus',['id'=>$d->id])}}" class="btn btn-danger ml-1" id="destroy">Hapus</a>
+        <td><a href="{{route('adminedit',['id'=>$d->id])}}" class="btn btn-success m-1">Edit</a>
+            <a href="{{route('adminhapus',['id'=>$d->id])}}" class="btn btn-danger ml-1" id="destroy">Hapus</a>
         </td>
       </tr>
   </div>
