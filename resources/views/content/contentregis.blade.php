@@ -9,28 +9,30 @@
                 </a>
             </div>
             <div class="login-form">
-                <form>
+                <form action="{{route('regis_proses')}}" method="POST">
+                    @csrf
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="email" class="form-control" placeholder="UserName">
+                        <input type="text" name="name" class="form-control" placeholder="UserName" value="{{old('name')}}">
+                        @error('name')
+                      <small>{{$message}}</small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" name="email" class="form-control" placeholder="Email" value="{{old('email')}}">
+                        @error('email')
+                      <small>{{$message}}</small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" placeholder="Password">
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Agree the terms and policy
-                        </label>
+                        <input type="password" name="password" class="form-control" placeholder="Password">
+                        @error('password')
+                      <small>{{$message}}</small>
+                        @enderror
                     </div>
                     <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Daftar</button>
-                    <div class="register-link m-t-15 text-center">
-                        <p>Sudah Punya Akun ? <a href="/login"> Sign in</a></p>
-                    </div>
                 </form>
             </div>
         </div>

@@ -13,6 +13,7 @@ Route::get('/', function (){
 route::get('/login', [LoginController::class, 'login'])->name('login');
 route::get('/regis', [LoginController::class, 'regis'])->name('regis');
 route::post('/login_proses', [LoginController::class, 'login_proses'])->name('login_proses');
+route::post('/regis_proses', [LoginController::class, 'regis_proses'])->name('regis_proses');
 route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
