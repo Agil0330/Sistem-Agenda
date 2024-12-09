@@ -24,6 +24,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
     route::post('/push', [BlogController::class, 'push'])->name('push');
     route::get('/edit/{id}', [BlogController::class, 'edit'])->name('edit');
     route::PUT('/update/{id}', [BlogController::class, 'update'])->name('update');
-    route::get('/hapus/{id}', [BlogController::class, 'hapus'])->name('hapus');
+    route::DELETE('/hapus/{id}', [BlogController::class, 'hapus'])->name('hapus');
 });
 

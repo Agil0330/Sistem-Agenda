@@ -13,13 +13,13 @@
           <div class="login-form">
               <form action="{{route('login_proses')}}" method="POST">
                 @csrf
-                <div class="form-group">
+                {{-- <div class="form-group">
                   <label>Username</label>
                   <input type="username" name="name" class="form-control" placeholder="Username">
                   @error('name')
                       <small>{{$message}}</small>
                   @enderror
-              </div>
+                </div> --}}
                   <div class="form-group">
                       <label>Email</label>
                       <input type="email" name="email" class="form-control" placeholder="Email">

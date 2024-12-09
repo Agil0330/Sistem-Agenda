@@ -17,12 +17,10 @@ class LoginController extends Controller
 
     public  function login_proses(Request $request){
         $request->validate([
-            'name' => 'required',
             'email' => 'required',
             'password' => 'required',
         ]);
         $data = [
-            'name' => $request->name,
             'email' => $request->email,
             'password' => $request->password
         ];
@@ -30,7 +28,7 @@ class LoginController extends Controller
         if(Auth::attempt($data)){
             return redirect()->route('adminhome');
         }else{
-            return redirect()->route('login')->with('failed','nama atau email atau password salah');
+            return redirect()->route('login')->with('failed','Email atau Password salah');
         }
     }
 

@@ -12,24 +12,22 @@
                     </div>
 
                     <div class="dropdown for-notification">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-bell"></i>
-                        <span class="count bg-danger"></span>
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="notification">
-                        
-                      </div>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell"></i>
+                            <span class="count bg-danger"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="notification">
+
+                        </div>
                     </div>
 
                     <div class="dropdown for-message">
-                      <button class="btn btn-secondary dropdown-toggle" type="button"
-                            id="message"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="ti-email"></i>
-                        <span class="count bg-primary">2</span>
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="message">
-                      </div>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="message" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ti-email"></i>
+                            <span class="count bg-primary">2</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="message">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,16 +41,16 @@
                     </a>
 
                     <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
-                            <a class="nav-link" href="{{route('logout')}}"><i class="fa fa-power -off"></i>Log Out</a>
+                        <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
+                        <a class="nav-link" href="{{route('logout')}}"><i class="fa fa-power -off"></i>Log Out</a>
                     </div>
                 </div>
 
                 <div class="language-select dropdown" id="language-select">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="language" aria-haspopup="true" aria-expanded="true">
                         <i class="flag-icon flag-icon-id"></i>
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="language" >
+                    <div class="dropdown-menu" aria-labelledby="language">
                         <div class="dropdown-item">
                             <span class="flag-icon flag-icon-jp"></span>
                         </div>

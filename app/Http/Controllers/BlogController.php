@@ -43,7 +43,7 @@ class BlogController extends Controller
     }
 
 // menghapus data Event
-    public function hapus($id){
+    public function hapus(Request $request,$id){
         $data_event = Event::findorfail($id);
         $data_event->delete();
         return back();
