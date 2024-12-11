@@ -35,11 +35,7 @@
             <div class="col-sm-5">
                 <div class="user-area dropdown float-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<<<<<<< HEAD
-                        <img class="user-avatar rounded-circle" src="" alt="User Avatar">
-=======
                         <img class="user-avatar rounded-circle" src="https://www.google.com/imgres?q=logo%20user&imgurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-vector%2F20191009%2Fourmid%2Fpngtree-user-icon-png-image_1796659.jpg&imgrefurl=https%3A%2F%2Fpngtree.com%2Fso%2Fuser-icon&docid=szqkvE-_5Cm9EM&tbnid=DZlkBa8SsD13sM&vet=12ahUKEwi5h7mO456KAxVq1DgGHVWqIDcQM3oECBcQAA..i&w=360&h=360&hcb=2&ved=2ahUKEwi5h7mO456KAxVq1DgGHVWqIDcQM3oECBcQAA" alt="User Avatar">
->>>>>>> 733ce73 (CRUD)
                         {{-- <img class="user-avatar rounded-circle" src="{{ asset('style/images/admin.jpg')}}" alt="User Avatar"> --}}
 
                     </a>

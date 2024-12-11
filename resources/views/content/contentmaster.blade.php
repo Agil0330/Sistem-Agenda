@@ -12,14 +12,6 @@
             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                 <thead>
                     <tr>
-<<<<<<< HEAD
-                        <th>Nomor</th>
-                        <th>Nama Event</th>
-                        <th>Waktu</th>
-                        <th>Tanggal</th>
-                        <th>Lokasi</th>
-                        <th>Keterangan</th>
-=======
                         <th>No</th>
                         <th>Nama Event</th>
                         <th>Tanggal</th>
@@ -27,7 +19,6 @@
                         <th>Lokasi</th>
                         <th>Keterangan</th>
                         <th>Status</th>
->>>>>>> 733ce73 (CRUD)
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -40,16 +31,10 @@
                         <td>{{$d['waktu']}}</td>
                         <td>{{$d['lokasi']}}</td>
                         <td>{{$d['keterangan']}}</td>
-<<<<<<< HEAD
-                        <td>
-                            <a href="{{route('adminedit',['id'=>$d->id])}}" class="btn btn-success m-1">Edit</a>
-                            <a href="#" data-toggle="modal" data-target="#HapusModal{{$d->id}}" class="btn btn-danger ml-1" id="destroy">Hapus</a>
-=======
                         <td></td>
                         <td class="text-align:center">
                             <a href="{{route('adminedit',['id'=>$d->id])}}" class="fa fa-pencil-square-o fa-lg m-2"></a>
                             <a href="#" data-toggle="modal" data-target="#HapusModal{{$d->id}}" class="fa fa-trash-o fa-lg m-1" id="destroy"></a>
->>>>>>> 733ce73 (CRUD)
                         </td>
                     </tr>
                     <div class="modal fade" id="HapusModal{{$d->id}}" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
