@@ -17,7 +17,8 @@ return new class extends Migration
             $table->date('tanggal');
             $table->time('waktu');
             $table->string('lokasi' ,70);
-            $table->string('keterangan' ,100);    
+            $table->string('keterangan' ,100);
+            $table->enum('status',['Belum Terlaksana','Terlaksana'])->default('Belum Terlaksana');    
             $table->timestamps();
         });
     }

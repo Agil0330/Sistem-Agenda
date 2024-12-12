@@ -12,7 +12,8 @@
         <div class="form-group"><label for="waktu" class=" form-control-label">Waktu</label><input type="time" name="waktu" id="waktu" placeholder="Masukan Nama Lokasi" class="form-control"></div>
         <div class="form-group"><label for="tanggal" class=" form-control-label">Tanggal</label><input type="date" name="tanggal" id="tanggal" placeholder="Masukan Ketentuan yang Berlaku" class="form-control"></div>
         <div class="form-group"><label for="lokasi" class=" form-control-label">Lokasi</label><input type="text" name="lokasi" id="lokasi" placeholder="Masukan Nama Lokasi" class="form-control"></div>
-        <div class="form-group"><label for="keterangan" class=" form-control-label">Keterangan</label><input type="text" name="keterangan" id="keterangan" placeholder="Masukan Ketentuan yang Berlaku" class="form-control"></div>
+        <div class="form-group"><label for="keterangan" class=" form-control-label">Keterangan</label><textarea type="text" name="keterangan" id="keterangan" placeholder="Masukan Ketentuan yang Berlaku" class="form-control"></textarea></div>
+
       </div>
       <div class="card-footer">
         <button type="submit" class="btn btn-primary btn-sm">

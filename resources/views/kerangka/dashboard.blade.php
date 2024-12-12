@@ -78,11 +78,11 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+
         <div class="col-sm-8">
-=======
+
         {{-- <div class="col-sm-8">
->>>>>>> 733ce73 (CRUD)
+
             <div class="page-header float-right">
                 <div class="page-title">
                     <ol class="breadcrumb text-right">
@@ -92,9 +92,8 @@
                     </ol>
                 </div>
             </div>
-<<<<<<< HEAD
         </div>
-=======
+
         </div> --}}
->>>>>>> 733ce73 (CRUD)
+
     </div>

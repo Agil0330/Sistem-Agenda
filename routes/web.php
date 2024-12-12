@@ -8,7 +8,11 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/', function (){
     return view ('content.contentlogin');
-    });
+});
+
+Route::get('/user', function (){
+    return view ('user');
+});
 
 route::get('/login', [LoginController::class, 'login'])->name('login');
 route::get('/regis', [LoginController::class, 'regis'])->name('regis');

@@ -14,7 +14,9 @@ class BlogController extends Controller
     
     public function home(){
         $jumlah=event::count();
-        return view ('content.contenthome', compact('jumlah'));
+        $terlaksana=event::where('status','Terlaksana')->count();
+        $blmter=event::where('status','Belum Terlaksana')->count();
+        return view ('content.contenthome', compact('jumlah','terlaksana','blmter'));
     }
     public function add(){
         return view('content.addevent');

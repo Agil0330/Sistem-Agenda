@@ -31,7 +31,7 @@
                         <td>{{$d['waktu']}}</td>
                         <td>{{$d['lokasi']}}</td>
                         <td>{{$d['keterangan']}}</td>
-                        <td></td>
+                        <td>{{$d['status']}}</td>
                         <td class="text-align:center">
                             <a href="{{route('adminedit',['id'=>$d->id])}}" class="fa fa-pencil-square-o fa-lg m-2"></a>
                             <a href="#" data-toggle="modal" data-target="#HapusModal{{$d->id}}" class="fa fa-trash-o fa-lg m-1" id="destroy"></a>
