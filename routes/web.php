@@ -10,9 +10,6 @@ Route::get('/', function (){
     return view ('content.contentlogin');
 });
 
-Route::get('/user', function (){
-    return view ('user');
-});
 
 route::get('/login', [LoginController::class, 'login'])->name('login');
 route::get('/regis', [LoginController::class, 'regis'])->name('regis');
@@ -20,6 +17,7 @@ route::post('/login_proses', [LoginController::class, 'login_proses'])->name('lo
 route::post('/regis_proses', [LoginController::class, 'regis_proses'])->name('regis_proses');
 route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
+route::get('/user', [BlogController::class, 'view'])->name('view');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], function(){
     route::get('/event', [BlogController::class, 'index'])->name('event');

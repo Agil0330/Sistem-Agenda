@@ -51,4 +51,11 @@ class BlogController extends Controller
         $data_event->delete();
         return back();
     }
+
+// menampilkan data untuk User Form
+    public function view(){
+        $data=event::all()->where('status','Belum Terlaksana');
+        return view ('user', compact('data'));
+    }
+
 }
