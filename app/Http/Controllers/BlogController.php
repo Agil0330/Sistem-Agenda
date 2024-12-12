@@ -13,7 +13,12 @@ class BlogController extends Controller
     }
     
     public function home(){
+<<<<<<< HEAD
         return view ('content.contenthome');
+=======
+        $jumlah=event::count();
+        return view ('content.contenthome', compact('jumlah'));
+>>>>>>> 733ce73 (CRUD)
     }
     public function add(){
         return view('content.addevent');
