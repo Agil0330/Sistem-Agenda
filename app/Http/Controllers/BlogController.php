@@ -7,9 +7,21 @@ use App\Models\Event;
 
 class BlogController extends Controller
 {
-    public function index(){
-        $data_event=event::all();
-        return view ('content.contentmaster', compact('data_event'));
+    public function index(Request $request){
+        $cari=$request->query('cari');
+        if(!empty($cari)){
+            $data_event=event::sortable()
+            ->where('nama_event','LIKE','%'.$cari.'%')
+            ->orwhere('lokasi','LIKE','%'.$cari.'%')
+            ->orwhere('keterangan','LIKE','%'.$cari.'%')
+            ->paginate(10)->onEachSide(2);
+        }else{
+            $data_event=event::sortable()->paginate(10)->onEachSide(2);
+        }
+        // $data_event=event::sortable()->paginate(10)->onEachSide(2);
+        return view ('content.contentmaster', compact('data_event'))->with([
+            'cari' => $cari,
+        ]);
     }
     
     public function home(){
@@ -25,12 +37,6 @@ class BlogController extends Controller
 // menambahkan data Event
     public function push(Request $request){
         Event::create($request->all());
-        // $data_event['nama_event'] = $request->nama_event;
-        // $data_event['waktu'] = $request->waktu;
-        // $data_event['tanggal'] = $request->tanggal;
-        // $data_event['lokasi'] = $request->lokasi;
-        // $data_event['keterangan'] = $request->keterangan;
-        // Event::create($data_event);
         return redirect() -> route('adminevent');
     }
 // mengedit data Event
@@ -54,7 +60,7 @@ class BlogController extends Controller
 
 // menampilkan data untuk User Form
     public function view(){
-        $data=event::all()->where('status','Belum Terlaksana');
+        $data=event::all()->where('status','Belum Terlaksana','date');
         return view ('user', compact('data'));
     }
 

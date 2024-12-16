@@ -15,9 +15,11 @@
 </head>
 
 <body style="background-color:rgb(74, 165, 177);">
-<aside>
-
-</aside>
+    <header>
+        <div>
+            <marquee bgcolor="white"><font size=70>INFORMASI EVENT YANG AKAN TERLAKSANA</font></marquee>
+        </div>
+    </header>
     <div class="content mt-3">
         <div class="animated fadeIn">
             <div class="row">
@@ -40,17 +42,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($data as $v)
-                                  <tr>
-                                        <td>{{$loop->iteration}}</td>
-                                        <td>{{$v['nama_event']}}</td>
-                                        <td>{{$v['waktu']}}</td>
-                                        <td>{{$v['tanggal']}}</td>
-                                        <td>{{$v['lokasi']}}</td>
-                                        <td>{{$v['keterangan']}}</td>
-                                    </tr>  
-                                @endforeach
-                                    
+                                    @foreach ($data as $v)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $v['nama_event'] }}</td>
+                                            <td>{{ $v['waktu'] }}</td>
+                                            <td>{{ $v['tanggal'] }}</td>
+                                            <td>{{ $v['lokasi'] }}</td>
+                                            <td>{{ $v['keterangan'] }}</td>
+                                        </tr>
+                                    @endforeach
+
                                 </tbody>
                             </table>
                         </div>

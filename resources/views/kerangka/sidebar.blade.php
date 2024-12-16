@@ -13,7 +13,7 @@
                     <li>
                         <a href="{{route('adminhome')}}"> <i class="menu-icon fa fa-dashboard"></i>Home</a>
                         <a href="{{route('adminevent')}}"> <i class="menu-icon fa fa-puzzle-piece"></i>Event</a>
-                        <a href="{{}}"> <i class="menu-icon fa fa-puzzle-piece"></i>View</a>
+                        <a href="/user"> <i class="menu-icon fa fa-puzzle-piece"></i>View</a>
                         <a href=""> <i class="menu-icon fa fa-puzzle-piece"></i>About</a>
                     </li>
                 </ul>

@@ -27,7 +27,7 @@
         <button type="submit" class="btn btn-primary btn-sm">
           <i class="fa fa-dot-circle-o"></i> Update
         </button>
-        <button type="reset" class="btn btn-danger btn-sm">
+        <button type="reset" class="btn btn-danger btn-sm" onclick="goBack()">
           <i class="fa fa-ban"></i> Kembali
         </button>
       </div>

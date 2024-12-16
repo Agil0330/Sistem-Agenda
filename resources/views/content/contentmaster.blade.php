@@ -8,24 +8,37 @@
             <strong class="card-title">Daftar Event</strong>
         </div>
         <div class="card-body">
-            <a href="{{route('adminadd')}}" class="btn btn-primary mb-3">Tambah Data</a>
+            <a href="{{route('adminadd')}}" class="btn btn-primary mb-3">Tambah Data</a> 
+        <div class="card-tools float-right">
+            <form action="" method="GET">
+            <div class="form-group row ">
+                <div class="col-sm-10">
+                    <input type="text" name="cari" class="form-control float-right" placeholder="Search" aria-controls="bootstrap-data-table" value="{{$cari}}">
+                </div>
+                <button type="reset" class="btn btn-secondary fa fa-mail-reply-all" onclick="goBack()"></button>
+            </div>
+            </form>
+        </div> 
             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama Event</th>
-                        <th>Tanggal</th>
-                        <th>Waktu</th>
-                        <th>Lokasi</th>
+                        <th>@sortablelink('nama_event','Nama Event')</th>
+                        <th>@sortablelink('tanggal','Tanggal')</th>
+                        <th>@sortablelink('waktu','Jam')</th>
+                        <th>@sortablelink('lokasi','Lokasi')</th>
                         <th>Keterangan</th>
-                        <th>Status</th>
+                        <th>@sortablelink('status','Status')</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @php
+                        $nomor = 1 + (($data_event->currentPage()-1) * $data_event->perPage());
+                    @endphp
                     @foreach ($data_event as $d)
                     <tr>
-                        <td>{{$loop->iteration}}</td>
+                        <td>{{$nomor++}}</td>
                         <td>{{$d['nama_event']}}</td>
                         <td>{{$d['tanggal']}}</td>
                         <td>{{$d['waktu']}}</td>
@@ -65,7 +78,8 @@
                     @endforeach
                 </tbody>
             </table>
-
+            {{-- {{$data_event -> links()}} --}}
+            {!! $data_event->appends(Request::except('page'))->render() !!}
         </div>
     </div>
 </div>
