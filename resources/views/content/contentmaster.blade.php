@@ -15,7 +15,9 @@
                 <div class="col-sm-10">
                     <input type="text" name="cari" class="form-control float-right" placeholder="Search" aria-controls="bootstrap-data-table" value="{{$cari}}">
                 </div>
-                <button type="reset" class="btn btn-secondary fa fa-mail-reply-all" onclick="goBack()"></button>
+                <a href="{{route('adminevent')}}" class="btn btn-secondary">
+                    <i class="fa fa-ban"></i>
+                </a>
             </div>
             </form>
         </div> 
@@ -40,14 +42,16 @@
                     <tr>
                         <td>{{$nomor++}}</td>
                         <td>{{$d['nama_event']}}</td>
-                        <td>{{$d['tanggal']}}</td>
+                        <td>{{\Carbon\Carbon::parse($d->tanggal)->format('d-m-Y')}}</td>
                         <td>{{$d['waktu']}}</td>
                         <td>{{$d['lokasi']}}</td>
                         <td>{{$d['keterangan']}}</td>
                         <td>{{$d['status']}}</td>
                         <td class="text-align:center">
-                            <a href="{{route('adminedit',['id'=>$d->id])}}" class="fa fa-pencil-square-o fa-lg m-2"></a>
-                            <a href="#" data-toggle="modal" data-target="#HapusModal{{$d->id}}" class="fa fa-trash-o fa-lg m-1" id="destroy"></a>
+                            <a href="{{route('adminedit',['id'=>$d->id])}}" class="">
+                                <i class="fa fa-pencil-square-o fa-lg mr-1"></i>
+                            </a>
+                            <a href="#" data-toggle="modal" data-target="#HapusModal{{$d->id}}" class="fa fa-trash-o fa-lg" id="destroy"></a>
                         </td>
                     </tr>
                     <div class="modal fade" id="HapusModal{{$d->id}}" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">

@@ -15,11 +15,18 @@
 </head>
 
 <body style="background-color:rgb(74, 165, 177);">
-    <header>
-        <div>
-            <marquee bgcolor="white"><font size=70>INFORMASI EVENT YANG AKAN TERLAKSANA</font></marquee>
+    <header style="background-color: white">
+        <div style="float-center">
+            <img src="logo_x.png" alt="logo x" style="display:block; margin:auto; width: 100px" >
+            <h6 id="current-time">{{ $currentTime->translatedFormat('l, d F Y') }}<h5 id="live-time"></h5></h6>
         </div>
     </header>
+    <br>
+    <nav>
+        <div>
+            <marquee bgcolor="white"><font size="100px">INFORMASI EVENT YANG AKAN TERLAKSANA</font></marquee>
+        </div>
+    </nav>
     <div class="content mt-3">
         <div class="animated fadeIn">
             <div class="row">
@@ -44,10 +51,11 @@
                                 <tbody>
                                     @foreach ($data as $v)
                                         <tr>
+                                            
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $v['nama_event'] }}</td>
-                                            <td>{{ $v['waktu'] }}</td>
-                                            <td>{{ $v['tanggal'] }}</td>
+                                            <td>{{\Carbon\Carbon::parse($v->waktu)->format('H:i')}}</td>
+                                            <td>{{\Carbon\Carbon::parse($v->tanggal)->format('d-m-Y')}}</td>
                                             <td>{{ $v['lokasi'] }}</td>
                                             <td>{{ $v['keterangan'] }}</td>
                                         </tr>
@@ -63,11 +71,57 @@
             </div>
         </div><!-- .animated -->
     </div><!-- .content -->
-
-
     </div><!-- /#right-panel -->
 
+    {{-- <script>
+        function updateTime() {
+            var currentDate = new Date();
 
+            // Format tanggal dan waktu
+            var day = currentDate.getDate().toString().padStart(2, '0');
+            var month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Bulan mulai dari 0
+            var year = currentDate.getFullYear();
+            var hours = currentDate.getHours().toString().padStart(2, '0');
+            var minutes = currentDate.getMinutes().toString().padStart(2, '0');
+            var seconds = currentDate.getSeconds().toString().padStart(2, '0');
+
+            // Menampilkan tanggal dan waktu
+            var dateTimeString = day + '-' + month + '-' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+
+            // Update elemen dengan id datetime
+            document.getElementById('datetime').innerText = dateTimeString;
+        }
+
+        // Memanggil updateTime() setiap detik
+        setInterval(updateTime, 1000);
+
+        // Inisialisasi waktu saat halaman pertama dimuat
+        updateTime();
+    </script>
+
+     <p>Waktu server saat ini:</p>
+    <h2>Jam Berjalan:</h2> --}}
+    
+
+    <script>
+        // Fungsi untuk menampilkan waktu yang terupdate setiap detik
+        function updateLiveTime() {
+            const now = new Date(); // Ambil waktu saat ini
+            const hours = String(now.getHours()).padStart(2, '0'); // Format jam
+            const minutes = String(now.getMinutes()).padStart(2, '0'); // Format menit
+            const seconds = String(now.getSeconds()).padStart(2, '0'); // Format detik
+            const timeString = `${hours}:${minutes}:${seconds}`; // Gabungkan jam, menit, detik menjadi satu string
+
+            // Update konten elemen dengan id "live-time"
+            document.getElementById("live-time").innerText = timeString;
+        }
+
+        // Panggil fungsi updateLiveTime setiap detik
+        setInterval(updateLiveTime, 1000); // Update setiap 1000 milidetik (1 detik)
+
+        // Panggil updateLiveTime pertama kali agar waktu langsung muncul saat halaman pertama kali dimuat
+        updateLiveTime();
+    </script>
 </body>
 
 </html>

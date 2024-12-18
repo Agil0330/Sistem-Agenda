@@ -10,6 +10,7 @@ class Event extends Model
 
     protected $table='event';
     protected $guarded=[];
+    
 
     public $sortable = [
         'nama_event','waktu','tanggal','lokasi',

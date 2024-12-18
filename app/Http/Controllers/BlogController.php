@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use Carbon\Carbon;
 
 class BlogController extends Controller
 {
@@ -59,9 +60,11 @@ class BlogController extends Controller
     }
 
 // menampilkan data untuk User Form
-    public function view(){
-        $data=event::all()->where('status','Belum Terlaksana','date');
-        return view ('user', compact('data'));
+    public function view(){ 
+        $data=event::all()->where('status','Belum Terlaksana');
+        // Mengambil waktu saat ini menggunakan Carbon
+        $currentTime = Carbon::now()->locale('id');
+        return view ('user', compact('data','currentTime'));
     }
 
 }
