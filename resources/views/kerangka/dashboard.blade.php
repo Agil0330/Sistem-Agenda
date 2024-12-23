@@ -14,7 +14,6 @@
                     <div class="dropdown for-notification">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bell"></i>
-                            <span class="count bg-danger"></span>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="notification">
 
@@ -24,7 +23,7 @@
                     <div class="dropdown for-message">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="message" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="ti-email"></i>
-                            <span class="count bg-primary">2</span>
+                            {{-- <span class="count bg-primary">2</span> --}}
                         </button>
                         <div class="dropdown-menu" aria-labelledby="message">
                         </div>

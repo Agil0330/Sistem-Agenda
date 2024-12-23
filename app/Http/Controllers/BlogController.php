@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use Carbon\Carbon;
+use Illuminate\Console\Command;
 
 class BlogController extends Controller
 {
@@ -19,10 +20,22 @@ class BlogController extends Controller
         }else{
             $data_event=event::sortable()->paginate(10)->onEachSide(2);
         }
+
+        $today=Carbon::today();
+
+        $update=event::where('status', 'Belum Terlaksana')
+                     ->where('tanggal', '<', $today)
+                     ->get();
+        foreach ($update as $event) {
+           $event->status = 'Terlaksana'; // Mengubah status menjadi 'Terlaksana'
+           $event->save(); // Menyimpan perubahan
+        }
+
         // $data_event=event::sortable()->paginate(10)->onEachSide(2);
         return view ('content.contentmaster', compact('data_event'))->with([
             'cari' => $cari,
         ]);
+
     }
     
     public function home(){

@@ -18,7 +18,7 @@
     <header style="background-color: white">
         <div style="float-center">
             <img src="logo_x.png" alt="logo x" style="display:block; margin:auto; width: 100px" >
-            <h6 id="current-time">{{ $currentTime->translatedFormat('l, d F Y') }}<h5 id="live-time"></h5></h6>
+            <h6 style="padding-left: 20px" id="current-time">{{ $currentTime->translatedFormat('l, d F Y') }}<h5 style="padding-left: 20px" id="live-time"></h5></h6>
         </div>
     </header>
     <br>
