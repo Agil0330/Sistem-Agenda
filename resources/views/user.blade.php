@@ -15,16 +15,17 @@
 </head>
 
 <body style="background-color:rgb(74, 165, 177);">
+   @foreach ($setting as $s )     
     <header style="background-color: white">
         <div style="float-center">
-            <img src="logo_x.png" alt="logo x" style="display:block; margin:auto; width: 100px" >
+            <img src={{ asset('image/' . $s->logo) }} alt="logo" style="display:block; margin:auto; width: 100px" >
             <h6 style="padding-left: 20px" id="current-time">{{ $currentTime->translatedFormat('l, d F Y') }}<h5 style="padding-left: 20px" id="live-time"></h5></h6>
         </div>
     </header>
     <br>
     <nav>
         <div>
-            <marquee bgcolor="white"><font size="100px">INFORMASI EVENT YANG AKAN TERLAKSANA</font></marquee>
+            <marquee bgcolor="white"><font size="100px">{{$s['text']}}</font></marquee>
         </div>
     </nav>
     <div class="content mt-3">
@@ -72,7 +73,7 @@
         </div><!-- .animated -->
     </div><!-- .content -->
     </div><!-- /#right-panel -->
-
+    @endforeach
     {{-- <script>
         function updateTime() {
             var currentDate = new Date();

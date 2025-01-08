@@ -10,7 +10,6 @@ Route::get('/', function (){
     return view ('content.contentlogin');
 });
 
-
 route::get('/login', [LoginController::class, 'login'])->name('login');
 route::get('/regis', [LoginController::class, 'regis'])->name('regis');
 route::post('/login_proses', [LoginController::class, 'login_proses'])->name('login_proses');
@@ -23,6 +22,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin'], f
     route::get('/event', [BlogController::class, 'index'])->name('event');
     route::get('/home', [BlogController::class, 'home'])->name('home');
     route::get('/add', [BlogController::class, 'add'])->name('add');
+    route::get('/setting', [BlogController::class, 'layout'])->name('setting');
+    route::post('/stt', [BlogController::class, 'stt'])->name('setting.layout');
+
 
     route::post('/push', [BlogController::class, 'push'])->name('push');
     route::get('/edit/{id}', [BlogController::class, 'edit'])->name('edit');

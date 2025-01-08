@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\Setting;
+use illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 
@@ -25,6 +27,7 @@ class BlogController extends Controller
 
         $update=event::where('status', 'Belum Terlaksana')
                      ->where('tanggal', '<', $today)
+                     ->where('waktu', '<', $today)
                      ->get();
         foreach ($update as $event) {
            $event->status = 'Terlaksana'; // Mengubah status menjadi 'Terlaksana'
@@ -74,10 +77,41 @@ class BlogController extends Controller
 
 // menampilkan data untuk User Form
     public function view(){ 
+        $setting=setting::all();
         $data=event::all()->where('status','Belum Terlaksana');
         // Mengambil waktu saat ini menggunakan Carbon
         $currentTime = Carbon::now()->locale('id');
-        return view ('user', compact('data','currentTime'));
+        return view ('user', compact('data','currentTime','setting'));
+    }
+
+
+// mengedit settingan pada View
+    public function layout(){
+        return view('content.contentsetting');
+    }
+    public function stt(Request $request){
+        $request->validate([
+
+            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        // $setting = Setting::create($request->all());
+        // if($request->hasFile('logo')){
+        //     $request->file('logo')->move('image/',$request->file('logo')->getClientOriginalName());
+        //     $setting->logo = $request->file('logo')->getClientOriginalName();
+        //     $setting->save();
+        // }
+
+        $nm = $request->logo;
+        $logo =time().rand(100,999).".".$nm->getClientOriginalExtension();
+        $nw = new setting;
+        $nw -> judul = $request->judul;
+        $nw->text = $request->text;
+        $nw->logo = $logo;
+
+        $nm->move(public_path().'/image',$logo);
+        $nw->save();
+        return redirect()->route('adminsetting');
     }
 
 }
